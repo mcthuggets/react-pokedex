@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  font-family: Arial;
+  height: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-bottom-width: 10px;
+  border-color: black;
+  background-color: red;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+}
+
+/* the image in navbar */
+.navbar img {
+  float: left;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+}
+
+.navbar h2 {
+  justify-content: end;
+  color: white;
+}
+
+.backgroundColor {
+  height: 100%;
+  width: 100%;
+  background-color: darkblue;
+}
