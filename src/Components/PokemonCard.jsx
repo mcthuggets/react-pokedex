@@ -1,12 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-export default function PokemonCard() {
+
+export default function PokemonCard( pokemon, index ) {
 
   return (
 
     <>
-        <h2> Pokemon Name </h2>
-        <img src='/images/pokeball.png' ></img>    
+        <h2 className='pokemon-card' > {pokemon.pokemon.name} </h2>
     </>
   )
 }

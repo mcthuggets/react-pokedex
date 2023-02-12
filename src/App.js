@@ -1,5 +1,6 @@
 import Banner from './Components/Banner';
 import Navbar from './Components/Navbar';
+import Pokedex from './Components/Pokedex';
 import PokemonCard from './Components/PokemonCard';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <Banner />
 
     <div className='black-background'>
-      <PokemonCard />
+      <Pokedex />
     </div>
   </>
   );
