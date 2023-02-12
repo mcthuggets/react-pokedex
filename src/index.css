@@ -46,6 +46,8 @@ code {
   width: 100%;
   height: fit-content;
   margin: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   
   display:grid;
   grid-template-columns: 1fr 1fr;

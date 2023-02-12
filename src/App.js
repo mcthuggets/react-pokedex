@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import PokemonCard from './Components/PokemonCard';
 
 function App() {
+
   return (
   <>
     <Navbar />
