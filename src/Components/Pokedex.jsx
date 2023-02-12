@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PokemonCard from './PokemonCard'
 
 export default function Pokedex() {
@@ -8,22 +8,36 @@ export default function Pokedex() {
     //                                  -name
     //                                  -button to URL
     // use useState to update PokemonCard when a URL is clicked
-    // display 'name' 'picture' 'ability 1' 'ability 2' 
+    // display 'name' 'picture' 'ability 1' 'ability 2'
+    
+  const [pokemonListUI, setpokemonListUI] = useState([])
 
-    console.log('first')
+  let pokemonList = []
 
-    fetch( "https://pokeapi.co/api/v2/pokemon" )
-      .then( res => { 
-                      console.log(res)
-                      console.log('hi');
-                    } )
-      .catch( err => { console.log('oops! something went wrong...');})
+  const pokedexRequest = () => { 
+
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+    .then(response => response.json())
+    .then(allPokemon => { allPokemon.results.forEach(pokemon => { pokemonList.push(pokemon) })  } )
+    .then( () => {
+                    setpokemonListUI( pokemonList.map( (pokemon, index) => {
+                      return( <PokemonCard pokemon={pokemon} index={index} /> )
+                      })
+                    )
+                } )
+
+    console.log(pokemonList)
+
+    
+  }
 
 
   return (
     <>
 
-    <PokemonCard />
+    <button onClick={pokedexRequest}> Load Pokedex </button>
+
+    { pokemonListUI }
 
     </>
   )
