@@ -9,10 +9,6 @@ export default function Navbar() {
         <img src='images/pokeball.png'></img>
         <img src='images/pokemon-title.png'></img>
     </div>
-    
-    <div className='backgroundColor'>
-
-    </div>
 
     </>
   )

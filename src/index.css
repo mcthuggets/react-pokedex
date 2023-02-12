@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -40,8 +42,40 @@ code {
   color: white;
 }
 
-.backgroundColor {
-  height: 100%;
+.welcome-2-columns {
   width: 100%;
-  background-color: darkblue;
+  height: fit-content;
+  margin: 10%;
+  
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.welcome-2-columns h2 {
+  font-size: medium;
+  font-family: 'Press Start 2P';
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.welcome-2-columns h3 {
+  font-size: small;
+  font-family: 'Press Start 2P';
+  text-decoration: underline;
+  padding: 5px;
+  line-height: 45px;
+}
+
+.welcome-2-columns img {
+  padding: 10%;
+  width: 200px;
+  height: 400px;
+  padding: 10px;
+}
+
+.black-background {
+  background-color: black;
+  width: 100%;
+  height: 100%;
 }
