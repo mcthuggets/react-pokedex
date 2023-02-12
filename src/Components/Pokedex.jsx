@@ -10,7 +10,7 @@ export default function Pokedex() {
     // use useState to update PokemonCard when a URL is clicked
     // display 'name' 'picture' 'ability 1' 'ability 2'
     
-  const [pokemonListUI, setpokemonListUI] = useState([])
+  const [pokemonListUI, setpokemonListUI] = useState(<h2 className='pokemon-card'> Pokemon will appear here...</h2>)
 
   let pokemonList = []
 
