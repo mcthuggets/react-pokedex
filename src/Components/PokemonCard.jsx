@@ -7,12 +7,14 @@ export default function PokemonCard( pokemon, index ) {
 
   const [imgURL, setimgURL] = useState('/images/question-mark.png')
 
-
   const loadPokeInfo = () => {
 
     fetch( pokemon.pokemon.url )
     .then(response => response.json() )
-    .then( pokeInfo => setimgURL(pokeInfo.sprites.front_default) )
+    .then( pokeInfo =>  { 
+                          console.log(pokeInfo);
+                          setimgURL(pokeInfo.sprites.front_default) 
+                        } )
 
   }
 
@@ -22,9 +24,21 @@ export default function PokemonCard( pokemon, index ) {
 
       <div className='pokemon-card' onClick={loadPokeInfo}>
 
-        <h2 className='pokemon-card' > {pokemon.pokemon.name} </h2>
+        <h2> {pokemon.pokemon.name} </h2>
 
-        <img src={imgURL} width={'100px'} height={'100px'}></img>
+        <div className='pokemon-card-details'>
+
+          <div>
+            <img src={imgURL} width={'100px'} height={'100px'}></img>
+          </div>
+          
+          <div>
+            {/** more details to be added here */}
+          </div>
+          
+
+        </div>
+
 
       </div>
         
