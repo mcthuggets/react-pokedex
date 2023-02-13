@@ -92,3 +92,11 @@ code {
   font-family: 'Press Start 2P';
   text-decoration: underline;
 }
+
+.pokemon-card-details {
+
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  
+}
