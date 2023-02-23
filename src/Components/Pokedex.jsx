@@ -9,8 +9,9 @@ export default function Pokedex() {
 
   const pokedexRequest = () => { 
 
+    //get pokemon data
     fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
-      .then(response => response.json())
+      .then(response => { response.json() } )
       .then(allPokemon => { allPokemon.results.forEach(pokemon => { pokemonList.push(pokemon) })  } )
       .then( () => {
                       setpokemonListUI( pokemonList.map( (pokemon, index) => {
@@ -18,8 +19,8 @@ export default function Pokedex() {
                         })
                       )
                   } )
-
-  }
+    }
+  
 
 
   return (
@@ -29,7 +30,10 @@ export default function Pokedex() {
 
     <button onClick={pokedexRequest}> Load Pokedex </button>
 
-    { pokemonListUI }
+
+    <div className='pokeList'>
+      { pokemonListUI }
+    </div>
 
     </div>
 
