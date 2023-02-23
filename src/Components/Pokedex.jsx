@@ -25,9 +25,15 @@ export default function Pokedex() {
   return (
     <>
 
+    <div className='black-background'>
+
     <button onClick={pokedexRequest}> Load Pokedex </button>
 
     { pokemonListUI }
+
+    </div>
+
+
 
     </>
   )
