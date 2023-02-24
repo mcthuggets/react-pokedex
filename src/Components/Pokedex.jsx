@@ -11,8 +11,8 @@ export default function Pokedex() {
 
     //get pokemon data
     fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
-      .then(response => { response.json() } )
-      .then(allPokemon => { allPokemon.results.forEach(pokemon => { pokemonList.push(pokemon) })  } )
+      .then(response => response.json() )
+      .then(allPokemon => { allPokemon.results.forEach(pokemon => pokemonList.push(pokemon))  } )
       .then( () => {
                       setpokemonListUI( pokemonList.map( (pokemon, index) => {
                         return( <PokemonCard pokemon={pokemon} key={index} /> )
@@ -36,8 +36,6 @@ export default function Pokedex() {
     </div>
 
     </div>
-
-
 
     </>
   )
